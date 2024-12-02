@@ -13,7 +13,7 @@ const Item = (props: ItemType) => {
                     checked={props.status}
                     onChange={props.statusChange}
                 />
-                <FaTrash className="delete_button"/>
+                <FaTrash className="delete_button" onClick={props.deleteClick}/>
             </ActionsButtonsContainer>
         </ItemContainer>
     )
