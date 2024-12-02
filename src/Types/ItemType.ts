@@ -4,5 +4,6 @@ export type ItemType = {
     title: string,
     description: string,
     status: boolean,
-    statusChange: (e: ChangeEvent<HTMLInputElement>) => void
+    statusChange: (e: ChangeEvent<HTMLInputElement>) => void,
+    deleteClick: () => void
 }
