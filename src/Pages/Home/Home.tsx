@@ -80,6 +80,22 @@ const Home = () => {
         }
     }
 
+    const deleteTask = async (id: number) => {
+        try {
+            const response = await fetch(`https://to-do-list-api-7qr4.onrender.com/task/${id}`, {
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`
+                }
+            });
+
+            location.reload();
+        } catch (err) {
+            console.error(err);
+        }
+    }
+
     return(
         <HomeBody>
 
@@ -103,6 +119,7 @@ const Home = () => {
                             description={item.description}
                             status={item.status}
                             statusChange={() => statusChange(item.id, item.status)}
+                            deleteClick={() => deleteTask(item.id)}
                         />
                     )
                 })
