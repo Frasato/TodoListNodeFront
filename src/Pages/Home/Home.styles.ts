@@ -12,3 +12,17 @@ export const ItemsContainer = styled.div`
     flex-direction: column;
     align-items: center;
 `;
+
+export const MenuContainer = styled.div`
+    margin: 40px 0 10px 0;
+
+    .link{
+        color: white;
+        margin: 0 15px 0 15px;
+
+        &:hover{
+            color: gainsboro;
+            text-decoration: underline;
+        }
+    }
+`;
