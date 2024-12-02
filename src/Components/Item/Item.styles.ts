@@ -5,7 +5,7 @@ export const ItemContainer = styled.div`
     width: 450px;
     border-radius: 8px;
     padding: 10px;
-    margin: 40px 0 20px 0;
+    margin: 40px 0 0 0;
 `;
 
 export const TaskTitle = styled.h1`
