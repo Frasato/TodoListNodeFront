@@ -9,7 +9,10 @@ const Item = (props: ItemType) => {
             <TaskText>{props.description}</TaskText>
 
             <ActionsButtonsContainer>
-                <StatusButton />
+                <StatusButton 
+                    checked={props.status}
+                    onChange={props.statusChange}
+                />
                 <FaTrash className="delete_button"/>
             </ActionsButtonsContainer>
         </ItemContainer>
