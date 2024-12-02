@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import CreationSection from "../../Components/CreationSection/CreationSection";
 import Item from "../../Components/Item/Item";
-import { HomeBody, ItemsContainer } from "./Home.styles";
+import { HomeBody, ItemsContainer, MenuContainer } from "./Home.styles";
 import { ItemsType } from "../../Types/ItemsType";
+import { Link } from "react-router";
 
 const Home = () => {
 
@@ -72,6 +73,8 @@ const Home = () => {
                 },
                 body: JSON.stringify({ status: !status })
             });
+
+            location.reload();
         } catch (err) {
             console.error(err);
         }
@@ -79,6 +82,12 @@ const Home = () => {
 
     return(
         <HomeBody>
+
+            <MenuContainer>
+                <Link to="/login" className="link">Entrar na sua Conta</Link>
+                <Link to="/register" className="link">Criar Conta</Link>
+            </MenuContainer>
+
             <CreationSection 
                 changeDescription={(e) => setDescription(e.target.value)}
                 changeTitle={(e) => setTitle(e.target.value)}
