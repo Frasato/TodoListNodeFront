@@ -75,6 +75,10 @@ const Home = () => {
             });
 
             location.reload();
+
+            if(!response.ok){
+                console.log("Error on fetch items");
+            }
         } catch (err) {
             console.error(err);
         }
@@ -91,6 +95,10 @@ const Home = () => {
             });
 
             location.reload();
+
+            if(!response.ok){
+                console.log("Error on fetch items");
+            }
         } catch (err) {
             console.error(err);
         }
