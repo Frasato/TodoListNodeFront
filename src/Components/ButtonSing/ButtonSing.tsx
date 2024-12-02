@@ -4,8 +4,8 @@ import { ActionButton, TextButton } from "./ButtonSing.styles";
 const ButtonSing = (props: ButtonSignType) => {
     return (
         <>
-            <ActionButton>{props.buttonText}</ActionButton>
-            <TextButton>{props.textButton}</TextButton>
+            <ActionButton onClick={props.buttonClick}>{props.buttonText}</ActionButton>
+            <TextButton onClick={props.textButtonClick}>{props.textButton}</TextButton>
         </>
     )
 }
