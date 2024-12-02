@@ -5,7 +5,7 @@ const TextFields = (props: TextFieldsType) =>{
     return(
         <TextFieldsContainer>
             {props.icon}
-            <TextField placeholder={props.placeholder}/>
+            <TextField placeholder={props.placeholder} onChange={props.change}/>
         </TextFieldsContainer>
     )
 }
